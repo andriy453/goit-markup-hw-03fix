@@ -14,6 +14,12 @@
     --logo-heder-color:#2E2F42;
     --logo-footer-color:#F4F4FD;
 }
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: 1px solid tomato;
+}
 a{
     text-decoration: none;}
 
@@ -25,13 +31,31 @@ body{
      font-size: 16px;
      height: 100%;
      line-height: 1;
-     color:var(--color-text-color)
+     color:var(--color-text-color) ;
+     text-align: center;
+     
 }
 button{
     cursor:pointer;
   }
   ul{
     list-style-type: none;
+  }
+  .heder_conteiner{
+     margin: 0px 136px;
+     padding: 0 20px;
+    display: flex;
+    
+  }
+  .nav{
+    display: flex;
+  }
+  .logo1{
+    display: block;
+padding-top: 24px;
+padding-bottom: 24px;
+padding-left: 0;
+margin-right: 76px; 
   }
   .logo{
     font-family: 'Raleway';
@@ -40,6 +64,7 @@ button{
     color:var(--logo-color);
     line-height: 1.33;
     letter-spacing: 0.03em;
+    
   }
   .logo2{
     font-family: 'Raleway';
@@ -48,14 +73,29 @@ button{
     color:var(--logo-heder-color);
     line-height: 1.33;
     letter-spacing: 0.03em;
+
+
   }
-  .link{
+  .menu-heder{
+    display: flex;
+}
+.menu__item:not(:last-child){
+ margin-right: 40px;
+}
+  .menu-heder .link{
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--color-text-color);
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
+  .link:not(:last-child){
+    margin-right: 40px;
+  }
+ 
   .link:hover,
   :focus{
     color: var(--portfolio-buuton-bg-hover-color);
@@ -64,18 +104,46 @@ button{
  
   }
   .adres{
+    display: flex;
+
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color:var(--seconari-text-color) ; }
+    color:var(--seconari-text-color) ;
+    
+}
+.meil{
+    display: block;
+    padding-top: 24px;
+padding-bottom: 24px;
+margin-right: 40px;
+margin-left: 332px;
+
+}
+.tel{
+    display: block;
+    padding-top: 24px;
+padding-bottom: 24px;
+}
     .meil:hover,
     :focus{
         color: var(--portfolio-buuton-bg-hover-color);
+    }
+    .line{
+        border-bottom: 1px solid #E7E9FC;
+max-width: 1440px;
+height: 0px;
+
     }
     .hero{
         background-color: var(--hero-and-footer-bg-color);
     }
     .hero-title {
+        display: inline-block;
+       margin:  188px  466px 48px;
+        min-width: 496px;
+      
+
         font-weight: 700;
         font-size: 56px;
         line-height: 1.07;
@@ -83,6 +151,11 @@ button{
         color: var(--hero-title-and-button-color);
     }
     .buuton {
+        margin: 0px 635px 188px ;
+        padding: 16px 32px;
+        min-width: 176px; ;
+        box-sizing: border-box;
+
         font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
@@ -90,15 +163,14 @@ button{
         color: var(--hero-title-and-button-color);
        background-color: var(--portfolio-buuton-color);
        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-        border-radius: 4px;
-         
-         border-color: #4D5AE5;
+        border-radius: 4px ;
+         border-color: var(--logo-color);
     }
     .buuton:hover,
     :focus{
         background-color: var(--portfolio-buuton-bg-hover-color);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-border-radius: 4px;
+        border-radius: 4px;
     }
     .visually-hidden {
         position: absolute;
@@ -112,13 +184,25 @@ border-radius: 4px;
         clip-path: inset(100%);
         clip: rect(0 0 0 0);
         overflow: hidden;}
+
+
         .advantages {
+            display: flex;
+            margin: 120px 156px;
+           max-width: 1128px;
+        }
+
+        .advantages__item:not(:last-child){
+         margin-right: 24px;
+         min-width: 264px;
 
         }
-        .advantages__item {
-
-        }
+         
+        
         .advantages__title {
+             text-align: left;
+             margin-bottom: 8px; ;
+
             font-weight: 500;
             font-size: 20px;
             line-height: 1.2;
@@ -127,6 +211,8 @@ border-radius: 4px;
 
         }
         .advantages__text {
+            text-align: left;
+
             font-size: 16px;
             line-height: 1.5;
             letter-spacing: 0.02em;
@@ -134,8 +220,15 @@ border-radius: 4px;
          
         }
         .what {
+            margin: 0px 156px 120px;
+            max-width: 1128px;
+
+
         }
         .what__title {
+            margin-bottom: 72px;
+
+
             font-weight: 700;
             font-size: 36px;
             line-height: 1.11;
@@ -143,29 +236,57 @@ border-radius: 4px;
             color: var(--color-text-color);
         }
         .what__list {
+            display: flex;
         }
         .what__item {
+            display: block;
+            
+        }
+        .what__item:not(:last-child){
+            margin-right: 24px;
         }
         .what__imeg {
+            box-sizing: border-box;
             border: 1px solid #E7E9FC;
             background: linear-gradient(0deg, rgba(77, 90, 229, 0.1), rgba(77, 90, 229, 0.1)), url(2368.jpg);
         }
+       
         .team {
             background-color: var(--setion-bg-color);
+            
+           
+            
         }
         .team__title {
+            padding-top: 120px;
+
+            
             font-weight: 700;
             font-size: 36px;
         }
         .team__list {
+            display: flex;
+            margin: 72px 149px 0px;
+            padding-bottom: 120px;
+            
+
+            background-color: var(--setion-bg-color);
+
         }
         .team__item {
+        }
+        .team__item:not(:last-child){
+            margin-right: 24px;
         }
         .team__photo {
 
             background: url(man-with-laptop-presenting-something.jpg);
         }
         .team__sabtitle {
+            padding: 32px 64.9px 8px;
+            
+
+
             font-weight: 500;
             font-size: 20px;
             line-height: 1.2;
@@ -173,6 +294,9 @@ border-radius: 4px;
             color: var(--color-text-color);
         }
         .team__text {
+            padding: 0px 6.9px 32px;
+
+
             font-size: 16px;
             line-height: 1.5;
             letter-spacing: 0.02em;
@@ -182,9 +306,18 @@ border-radius: 4px;
         .footer {
             background-color: var(--hero-and-footer-bg-color);
         }
-        .logo {
+        .footer-conteiner{
+            background-color: var(--hero-and-footer-bg-color);
+            display: inline-block;
+            margin:   100px 1020px 100px 156px;
+            max-width: 264px;
+            display: inline-block;
+
         }
+        
         .footer-logo {
+           
+
             font-weight: 800;
             font-size: 18px;
             line-height: 1.66;
@@ -196,12 +329,35 @@ border-radius: 4px;
           line-height: 1.5;
           letter-spacing: 0.02em;
           color: var(--footer-text-color);
+          text-align: start;
         }
+        
+        .footer-logo1{
+            margin-bottom: 16px; 
+            text-align: left;
+            display: block;
+            
+        
+            font-family: 'Raleway';
+            font-weight: 800;
+            font-size: 18px;
+            color:var(--logo-color);
+            line-height: 1.33;
+            letter-spacing: 0.03em;
+        }
+        
 /* portfolio */
 .menu{
-
+display: flex;
+margin: 96px 414px 72px;
+}
+.menu__itemp:not(:last-child){
+margin-right: 24px;
 }
 .menu__buuton{
+    padding: 12px 24px;
+    
+
     font-weight: 500;
 font-size: 16px;
 line-height: 1.5;
@@ -217,9 +373,22 @@ border-radius: 4px;
     background-color: var(--portfolio-buuton-bg-hover-color);
 
 }
+
 .porfolio {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 148px 120px;
 }
-.porfolio__item {
+
+.porfolio__item:not(:nth-child(3n+3)){
+    margin-right: 24px;
+
+}
+.porfolio__item{
+    margin-bottom: 48px;
+    max-width: 360px;
+
+    border: 1px solid #E7E9FC;
 }
 .porfolio__photo {
     background: linear-gradient(0deg, rgba(77, 90, 229, 0.1), rgba(77, 90, 229, 0.1)), url(4074365.jpg);
@@ -227,16 +396,26 @@ background-blend-mode: soft-light, normal;
 mix-blend-mode: normal;
 }
 .portfolio__title {
+    padding: 32px 54px 8px 16px;
+    text-align: left;
+
+
     font-weight: 500;
 font-size: 20px;
 line-height: 1.2;
 letter-spacing: 0.02em;
 }
 .portfolio__text {
+    display: inline-block;
+    padding: 0px 314px 32px 16px;
+    text-align: left;
+
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--seconari-text-color);
 }
+
+
 
 
