@@ -17,22 +17,19 @@
 *{
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box;
     outline: 1px solid tomato;
+    box-sizing: border-box;
 }
 a{
     text-decoration: none;}
 
 body{
     background-color:var(--bg-color);
-    box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
      font-family: 'Roboto', sans-serif;
      font-size: 16px;
-     height: 100%;
-     line-height: 1;
+    
      color:var(--color-text-color) ;
-     text-align: center;
      
 }
 button{
@@ -95,7 +92,7 @@ margin-right: 76px;
   .link:not(:last-child){
     margin-right: 40px;
   }
- 
+
   .link:hover,
   :focus{
     color: var(--portfolio-buuton-bg-hover-color);
@@ -111,6 +108,11 @@ margin-right: 76px;
     letter-spacing: 0.02em;
     color:var(--seconari-text-color) ;
     
+}
+.adres__item{
+    display: inline-block;
+    
+
 }
 .meil{
     display: block;
@@ -129,12 +131,18 @@ padding-bottom: 24px;
     :focus{
         color: var(--portfolio-buuton-bg-hover-color);
     }
-    .line{
-        border-bottom: 1px solid #E7E9FC;
-max-width: 1440px;
-height: 0px;
+    
+        .line{
+            position: absolute;
+          width: 1440px;
+          height: 0px;
+          left: 0px;
+          top: 72px;
 
-    }
+
+          background-color: var(--bg-color);
+          border: 1px solid var(--footer-text-color);}
+    
     .hero{
         background-color: var(--hero-and-footer-bg-color);
     }
@@ -142,6 +150,7 @@ height: 0px;
         display: inline-block;
        margin:  188px  466px 48px;
         min-width: 496px;
+        text-align: center;
       
 
         font-weight: 700;
@@ -227,7 +236,7 @@ height: 0px;
         }
         .what__title {
             margin-bottom: 72px;
-
+            text-align: center;
 
             font-weight: 700;
             font-size: 36px;
@@ -259,7 +268,7 @@ height: 0px;
         }
         .team__title {
             padding-top: 120px;
-
+            text-align: center;
             
             font-weight: 700;
             font-size: 36px;
@@ -284,7 +293,7 @@ height: 0px;
         }
         .team__sabtitle {
             padding: 32px 64.9px 8px;
-            
+            text-align: center;
 
 
             font-weight: 500;
@@ -295,6 +304,7 @@ height: 0px;
         }
         .team__text {
             padding: 0px 6.9px 32px;
+            text-align: center;
 
 
             font-size: 16px;
@@ -349,7 +359,8 @@ height: 0px;
 /* portfolio */
 .menu{
 display: flex;
-margin: 96px 414px 72px;
+margin: 96px 422px 72px;
+
 }
 .menu__itemp:not(:last-child){
 margin-right: 24px;
@@ -377,27 +388,40 @@ border-radius: 4px;
 .porfolio {
     display: flex;
     flex-wrap: wrap;
+   
+   
+ 
+}
+.portfolio__conteiner{
     margin: 0px 148px 120px;
-}
-
-.porfolio__item:not(:nth-child(3n+3)){
-    margin-right: 24px;
-
-}
-.porfolio__item{
-    margin-bottom: 48px;
-    max-width: 360px;
-
-    border: 1px solid #E7E9FC;
-}
+max-width: 1128px;}
+   
+   
+    .porfolio__item:not(:nth-child(3n+3)){
+        margin-right: 24px;
+    }
+    .porfolio__item:not(:nth-last-child(-n + 3)){
+       margin-bottom: 48px;
+        
+    }
+    .porfolio__item{
+        height: 420px;
+        max-width: 360px;
+   
+       
+    }
+    .border{
+        border: 1px solid var(--footer-text-color);
+    }
 .porfolio__photo {
+    display: block;
+    
     background: linear-gradient(0deg, rgba(77, 90, 229, 0.1), rgba(77, 90, 229, 0.1)), url(4074365.jpg);
-background-blend-mode: soft-light, normal;
-mix-blend-mode: normal;
+
 }
 .portfolio__title {
-    padding: 32px 54px 8px 16px;
-    text-align: left;
+    padding: 32px 52px 8px 16px;
+    
 
 
     font-weight: 500;
@@ -406,9 +430,10 @@ line-height: 1.2;
 letter-spacing: 0.02em;
 }
 .portfolio__text {
-    display: inline-block;
-    padding: 0px 314px 32px 16px;
+   
+    padding: 0px 269px 32px 16px;
     text-align: left;
+    display: inline-block;
 
     font-size: 16px;
     line-height: 1.5;
