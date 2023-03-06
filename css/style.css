@@ -17,7 +17,7 @@
 *{
     margin: 0px;
     padding: 0px;
-    outline: 1px solid tomato;
+    
     box-sizing: border-box;
 }
 a{
@@ -270,6 +270,7 @@ padding-bottom: 24px;
             padding-top: 120px;
             text-align: center;
             
+            
             font-weight: 700;
             font-size: 36px;
         }
@@ -288,13 +289,13 @@ padding-bottom: 24px;
             margin-right: 24px;
         }
         .team__photo {
-
+display: block;
             background: url(man-with-laptop-presenting-something.jpg);
         }
         .team__sabtitle {
             padding: 32px 64.9px 8px;
             text-align: center;
-
+            background-color: var(--bg-color);
 
             font-weight: 500;
             font-size: 20px;
@@ -305,6 +306,7 @@ padding-bottom: 24px;
         .team__text {
             padding: 0px 6.9px 32px;
             text-align: center;
+            background-color: var(--bg-color);
 
 
             font-size: 16px;
